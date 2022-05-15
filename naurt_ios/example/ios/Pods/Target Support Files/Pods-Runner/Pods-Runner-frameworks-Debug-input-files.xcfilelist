@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Zip/Zip.framework
+${PODS_ROOT}/naurt_cocoapod/naurt_framework.framework
+${BUILT_PRODUCTS_DIR}/naurt_ios/naurt_ios.framework

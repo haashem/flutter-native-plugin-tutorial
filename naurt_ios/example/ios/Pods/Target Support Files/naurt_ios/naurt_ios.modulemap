@@ -1,0 +1,6 @@
+framework module naurt_ios {
+  umbrella header "naurt_ios-umbrella.h"
+
+  export *
+  module * { export * }
+}

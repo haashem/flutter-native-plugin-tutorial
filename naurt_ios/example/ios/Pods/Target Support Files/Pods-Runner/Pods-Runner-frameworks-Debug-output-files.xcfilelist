@@ -1,0 +1,3 @@
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Zip.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/naurt_framework.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/naurt_ios.framework

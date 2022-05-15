@@ -1,0 +1,151 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-module-flags: -target arm64-apple-ios13.4 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name naurt_framework
+import Combine
+import CoreLocation
+import CoreMotion
+import Foundation
+import QuartzCore
+import Swift
+import UIKit
+import Zip
+import _Concurrency
+@_exported import naurt_framework
+public struct NaurtLocation {
+  public var timestamp: Swift.Double
+  public var longitude: Swift.Double
+  public var latitude: Swift.Double
+  public var altitude: Swift.Double
+  public var altitude_accuracy: Swift.Double
+  public var speed: Swift.Double
+  public var speed_accuracy: Swift.Double
+  public var heading: Swift.Double
+  public var heading_accuracy: Swift.Double
+  public var horizontal_accuracy: Swift.Double
+  public var horizontal_covariance: Swift.Double
+}
+public struct rawLocation {
+  public var latitude: Swift.Double
+  public var longitude: Swift.Double
+  public var timestamp: Swift.UInt64
+}
+public enum NaurtTrackingStatus : Swift.String {
+  case FULL
+  case DEGRADED
+  case COMPROMISED
+  case INOPERABLE
+  case INVALID
+  case UNKNOWN
+  case ALREADY_RUNNING
+  case NOT_INITIALISED
+  case NO_PERMISSION
+  case LOCATION_NOT_ENABLED
+  case MINIMAL
+  case NOT_RUNNING
+  case STOPPED
+  case PAUSED
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+final public class Naurt : Foundation.ObservableObject {
+  public init()
+  public static let shared: naurt_framework.Naurt
+  @Combine.Published @_projectedValueProperty($apiKey) final public var apiKey: Swift.String? {
+    get
+  }
+  final public var $apiKey: Combine.Published<Swift.String?>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($precision) final public var precision: Swift.Int {
+    get
+  }
+  final public var $precision: Combine.Published<Swift.Int>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($isInitialised) final public var isInitialised: Swift.Bool {
+    get
+  }
+  final public var $isInitialised: Combine.Published<Swift.Bool>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($isValidated) final public var isValidated: Swift.Bool {
+    get
+  }
+  final public var $isValidated: Combine.Published<Swift.Bool>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($isRunning) final public var isRunning: Swift.Bool {
+    get
+  }
+  final public var $isRunning: Combine.Published<Swift.Bool>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($sessionState) final public var sessionState: Swift.String {
+    get
+  }
+  final public var $sessionState: Combine.Published<Swift.String>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($glogState) final public var glogState: Swift.String {
+    get
+  }
+  final public var $glogState: Combine.Published<Swift.String>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($locationPermission) final public var locationPermission: CoreLocation.CLAuthorizationStatus {
+    get
+  }
+  final public var $locationPermission: Combine.Published<CoreLocation.CLAuthorizationStatus>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($hasLocation) final public var hasLocation: Swift.Bool {
+    get
+  }
+  final public var $hasLocation: Combine.Published<Swift.Bool>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($naurtPoint) final public var naurtPoint: naurt_framework.NaurtLocation? {
+    get
+  }
+  final public var $naurtPoint: Combine.Published<naurt_framework.NaurtLocation?>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($naurtPoints) final public var naurtPoints: Swift.Array<naurt_framework.NaurtLocation> {
+    get
+  }
+  final public var $naurtPoints: Combine.Published<[naurt_framework.NaurtLocation]>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($journeyUuid) final public var journeyUuid: Foundation.UUID? {
+    get
+  }
+  final public var $journeyUuid: Combine.Published<Foundation.UUID?>.Publisher {
+    get
+  }
+  @Combine.Published @_projectedValueProperty($trackingStatus) final public var trackingStatus: naurt_framework.NaurtTrackingStatus {
+    get
+  }
+  final public var $trackingStatus: Combine.Published<naurt_framework.NaurtTrackingStatus>.Publisher {
+    get
+  }
+  final public func initialise(apiKey: Swift.String, precision: Swift.Int)
+  final public func start()
+  final public func stop()
+  final public func pause()
+  final public func resume()
+  final public func flush()
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+public func iosDefaultState() -> [Swift.UInt8]
+public func publishPositions(inState: [Swift.UInt8]) -> [Swift.Double]
+public func iosNewReadings(inState: [Swift.UInt8], sensorBuffer: [[Swift.Double]]) -> [Swift.UInt8]
+public func checksum(input: [Swift.UInt8]) -> Swift.String
+public enum IosSdkLifecycle {
+}
+extension naurt_framework.NaurtTrackingStatus : Swift.Equatable {}
+extension naurt_framework.NaurtTrackingStatus : Swift.Hashable {}
+extension naurt_framework.NaurtTrackingStatus : Swift.RawRepresentable {}

@@ -1,0 +1,33 @@
+PODS:
+  - Flutter (1.0.0)
+  - naurt_cocoapod (0.6.0):
+    - Zip
+  - naurt_ios (0.0.1):
+    - Flutter
+    - naurt_cocoapod (= 0.6.0)
+  - Zip (2.1.2)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - naurt_ios (from `.symlinks/plugins/naurt_ios/ios`)
+
+SPEC REPOS:
+  trunk:
+    - naurt_cocoapod
+    - Zip
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  naurt_ios:
+    :path: ".symlinks/plugins/naurt_ios/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  naurt_cocoapod: ebb57046910a98938ca274c4716ba0624cc646a0
+  naurt_ios: 18d6d6bd06b4d656e3e63128cfdbcb8678541020
+  Zip: b3fef584b147b6e582b2256a9815c897d60ddc67
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.11.2

@@ -8,6 +8,8 @@ import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 
+import  com.naurt_kotlin_sdk.Naurt.INSTANCE as Naurt
+
 /** NaurtAndroidPlugin */
 class NaurtAndroidPlugin: FlutterPlugin, MethodCallHandler {
   /// The MethodChannel that will the communication between Flutter and native Android

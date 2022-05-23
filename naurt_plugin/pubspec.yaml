@@ -1,0 +1,35 @@
+name: naurt_plugin
+description: A new Flutter plugin project.
+version: 0.0.1
+publish_to: 'none'
+homepage:
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+  flutter: ">=2.5.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+ 
+  naurt_platfrom_interface:
+    path: ../naurt_platfrom_interface/
+  naurt_android:
+    path: ../naurt_android/
+  naurt_ios:
+    path: ../naurt_ios/
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+# The following section is specific to Flutter packages.
+flutter:
+  plugin:
+    platforms:
+      android:
+        default_package: naurt_android
+      ios:
+        default_package: naurt_ios
+    # -------------------
